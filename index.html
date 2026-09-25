@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simple QR Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- QR Code library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>QR Code Generator</h1>
+
+        <p class="subtitle">
+            Enter a website link and turn it into a QR code.
+        </p>
+
+        <div class="generator">
+
+            <label for="urlInput">
+                Website URL
+            </label>
+
+            <input
+                type="url"
+                id="urlInput"
+                placeholder="https://example.com"
+            >
+
+            <button onclick="generateQR()">
+                Generate QR Code
+            </button>
+
+            <p id="message"></p>
+
+            <div id="qrcode"></div>
+
+            <button
+                id="downloadButton"
+                class="download"
+                onclick="downloadQR()"
+                style="display: none;"
+            >
+                Download QR Code
+            </button>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
